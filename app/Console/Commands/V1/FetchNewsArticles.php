@@ -58,13 +58,10 @@ class FetchNewsArticles extends Command
         foreach ($this->newsApiEndpoints as $endpoint) {
             $category = explode('=', $endpoint)[1];
             $newEndpoint = $endpoint . '&apiKey=' . $this->newsApiToken;
-            $this->info("AHEGDE " . $newEndpoint);
             $response = $client->request('GET', $newEndpoint);
 
             $newsArticles = json_decode($response->getBody(), true);
-            var_dump($newsArticles);
-            // $this->info($newsArticles);
-
+            
             foreach ($newsArticles['articles'] as $article) {
                 $sanitizedArticle = [
                     'title' => $article['title'],
