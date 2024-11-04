@@ -20,7 +20,8 @@ class NewsArticleController extends Controller
     {
         $filter = new NewsArticleQueryFilter($request);
         $queryItems = $filter->transform($request);
-        return new NewsArticleCollection(NewsArticle::where($queryItems)->paginate());
+        $newsArticles = NewsArticle::where($queryItems)->paginate(10);
+        return new NewsArticleCollection($newsArticles->appends($request->query()));
     }
 
     /**

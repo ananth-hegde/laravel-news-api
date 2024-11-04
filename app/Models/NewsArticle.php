@@ -8,4 +8,12 @@ class NewsArticle extends Model
 {
     //
     protected $table = 'news_articles';
+    protected $fillable = [
+        'title',
+        'url',
+        'source',
+        'category',
+        'author',
+        'published_at',
+    ];
 }

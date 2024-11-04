@@ -51,5 +51,3 @@ protected $safeParams = [
         return $eloQuery;
     }
 }
-
-?>
