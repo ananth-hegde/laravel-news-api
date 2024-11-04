@@ -1,0 +1,105 @@
+newsapi.org key= 04acd37a387f4e399bd5266397dafd19
+guardian key = e03e3894-da1d-4ee8-9972-ea6ed2f46736
+nyc key = CaxFuyx4JptpBKR3SiyNdFQOp7vKGdn3
+
+newsapilink = https://newsapi.org/v2/top-headlines?country=us&apiKey=04acd37a387f4e399bd5266397dafd19
+
+nytimeslink = https://api.nytimes.com/svc/topstories/v2/home.json?api-key=CaxFuyx4JptpBKR3SiyNdFQOp7vKGdn3
+guardianlink = https://content.guardianapis.com/search?api-key=e03e3894-da1d-4ee8-9972-ea6ed2f46736
+
+// Output
+nyc_output = 
+{
+      "section": "us",
+      "subsection": "politics",
+      "title": "How Americans Feel About the Election: Anxious and Scared",
+      "abstract": "Vice President Kamala Harris and former President Donald J. Trump have framed the presidential race as an existential battle. Voters are heeding their warnings.",
+      "url": "https://www.nytimes.com/2024/11/04/us/politics/election-anxiety.html",
+      "uri": "nyt://article/3548756f-0526-5abe-8ae6-baa0fd430479",
+      "byline": "By Lisa Lerer and Katie Glueck",
+      "item_type": "Article",
+      "updated_date": "2024-11-04T11:55:02-05:00",
+      "created_date": "2024-11-04T11:24:55-05:00",
+      "published_date": "2024-11-04T11:24:55-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Presidential Election of 2024",
+        "United States Politics and Government"
+      ],
+      "org_facet": [
+        "Democratic Party",
+        "Republican Party"
+      ],
+      "per_facet": [],
+      "geo_facet": [
+        "Allentown (Pa)",
+        "East Lansing (Mich)"
+      ],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2024/11/04/multimedia/04pol-mood-2-01-vcbh/04pol-mood-2-01-vcbh-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Haiyun Jiang for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2024/11/04/multimedia/04pol-mood-2-01-vcbh/04pol-mood-2-01-vcbh-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Haiyun Jiang for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2024/11/04/multimedia/04pol-mood-2-01-vcbh/04pol-mood-2-01-vcbh-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Haiyun Jiang for The New York Times"
+        }
+      ],
+      "short_url": ""
+    },
+
+
+guardian_output =
+
+{
+    "id": "politics/live/2024/nov/04/keir-starmer-labour-migration-interpol-kemi-badenoch-conservative-shadow-cabinet-uk-politics-latest-news",
+    "type": "liveblog",
+    "sectionId": "politics",
+    "sectionName": "Politics",
+    "webPublicationDate": "2024-11-04T17:21:47Z",
+    "webTitle": "Mel Stride appointed shadow chancellor and Priti Patel shadow foreign secretary as Kemi Badenoch announces team – UK politics live",
+    "webUrl": "https://www.theguardian.com/politics/live/2024/nov/04/keir-starmer-labour-migration-interpol-kemi-badenoch-conservative-shadow-cabinet-uk-politics-latest-news",
+    "apiUrl": "https://content.guardianapis.com/politics/live/2024/nov/04/keir-starmer-labour-migration-interpol-kemi-badenoch-conservative-shadow-cabinet-uk-politics-latest-news",
+    "isHosted": false,
+    "pillarId": "pillar/news",
+    "pillarName": "News"
+  },
+
+newsapi_output = 
+
+{
+    "source": {
+      "id": "the-hill",
+      "name": "The Hill"
+    },
+    "author": "Becket Adams, Opinion Contributor",
+    "title": "No, Trump did not threaten Liz Cheney with a firing squad - The Hill",
+    "description": "The “firing squad” claim isn’t even a little bit true. It doesn’t lack context. He simply didn’t say what they said he said.",
+    "url": "https://thehill.com/opinion/campaign/4967807-trump-firing-squad-claims/",
+    "urlToImage": "https://thehill.com/wp-content/uploads/sites/2/2024/11/trumpdonald_103124ap01_w.jpg?w=1280",
+    "publishedAt": "2024-11-03T13:30:00Z",
+    "content": "Skip to content\r\nNo one knows how Election Day will turn out.\r\nBut if the press’s panicked behavior this week is any sign, including its false claim that former President Donald Trump called for Repu… [+4844 chars]"
+  },
