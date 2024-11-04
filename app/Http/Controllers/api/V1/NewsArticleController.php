@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers\api\V1;
 
+use App\Http\Resources\V1\NewsArticleCollection;
+use App\Http\Resources\V1\NewsArticleResource;
 use App\Models\NewsArticle;
 use App\Http\Requests\StoreNewsArticleRequest;
+use App\Filters\V1\NewsArticleQueryFilter;
 use App\Http\Requests\UpdateNewsArticleRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class NewsArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return NewsArticle::paginate();
+        $filter = new NewsArticleQueryFilter($request);
+        $queryItems = $filter->transform($request);
+        return new NewsArticleCollection(NewsArticle::where($queryItems)->paginate());
     }
 
     /**
@@ -38,7 +44,7 @@ class NewsArticleController extends Controller
      */
     public function show(NewsArticle $newsArticle)
     {
-        return $newsArticle;
+        return new NewsArticleResource($newsArticle);
     }
 
     /**
