@@ -6,6 +6,42 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\NewsArticleCollection;
 use App\Models\NewsArticle;
+/**
+ * @OA\Get(
+ *     path="/v1/preferences",
+ *     summary="Get user preferences",
+ *     tags={"User Preferences"},
+ *     security={{ "bearerAuth": {} }},
+ *     @OA\Response(response=200, description="User preferences"),
+ *     @OA\Response(response=401, description="Unauthenticated")
+ * )
+ * 
+ * @OA\Put(
+ *     path="/v1/preferences",
+ *     summary="Update user preferences",
+ *     tags={"User Preferences"},
+ *     security={{ "bearerAuth": {} }},
+ *     @OA\RequestBody(
+ *         required=true,
+ *         @OA\JsonContent(
+ *             @OA\Property(property="categories", type="array", @OA\Items(type="string")),
+ *             @OA\Property(property="sources", type="array", @OA\Items(type="string")),
+ *             @OA\Property(property="authors", type="array", @OA\Items(type="string"))
+ *         )
+ *     ),
+ *     @OA\Response(response=200, description="Preferences updated successfully"),
+ *     @OA\Response(response=401, description="Unauthenticated")
+ * )
+ * 
+ * @OA\Get(
+ *     path="/v1/personalizedFeed",
+ *     summary="Get personalized news feed",
+ *     tags={"User Preferences"},
+ *     security={{ "bearerAuth": {} }},
+ *     @OA\Response(response=200, description="Personalized news feed"),
+ *     @OA\Response(response=401, description="Unauthenticated")
+ * )
+ */
 class UserPreferenceController extends Controller
 {
 

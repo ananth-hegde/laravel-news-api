@@ -10,6 +10,90 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 
+/**
+ * @OA\Post(
+ *     path="/register",
+ *     summary="Register a new user",
+ *     tags={"Authentication"},
+ *     @OA\RequestBody(
+ *         required=true,
+ *         @OA\JsonContent(
+ *             @OA\Property(property="name", type="string", example="John Doe"),
+ *             @OA\Property(property="email", type="string", format="email", example="john@example.com"),
+ *             @OA\Property(property="password", type="string", format="password", example="password123")
+ *         )
+ *     ),
+ *     @OA\Response(
+ *         response=200,
+ *         description="User created successfully",
+ *         @OA\JsonContent(
+ *             @OA\Property(property="status", type="string"),
+ *             @OA\Property(property="message", type="string"),
+ *             @OA\Property(property="auth_token", type="string")
+ *         )
+ *     ),
+ *     @OA\Response(response=401, description="Validation error")
+ * )
+ *
+ * @OA\Post(
+ *     path="/login",
+ *     summary="Log in to existing user",
+ *     tags={"Authentication"},
+ *     @OA\RequestBody(
+ *         required=true,
+ *         @OA\JsonContent(
+ *             @OA\Property(property="email", type="string", format="email", example="john@example.com"),
+ *             @OA\Property(property="password", type="string", format="password", example="password123")
+ *         )
+ *     ),
+ *     @OA\Response(
+ *         response=200,
+ *         description="Login successful",
+ *         @OA\JsonContent(
+ *             @OA\Property(property="status", type="string"),
+ *             @OA\Property(property="message", type="string"),
+ *             @OA\Property(property="auth_token", type="string")
+ *         )
+ *     ),
+ *     @OA\Response(response=401, description="Invalid credentials")
+ * )
+ *  * @OA\Post(
+ *     path="/logout",
+ *     summary="Log out the current user",
+ *     tags={"Authentication"},
+ *     security={{ "bearerAuth": {} }},
+ *     @OA\Response(
+ *         response=200,
+ *         description="Logout successful",
+ *         @OA\JsonContent(
+ *             @OA\Property(property="status", type="string"),
+ *             @OA\Property(property="message", type="string")
+ *         )
+ *     ),
+ *     @OA\Response(response=401, description="Unauthenticated")
+ * )
+ *
+ * @OA\Post(
+ *     path="/password/reset",
+ *     summary="Reset user password",
+ *     tags={"Authentication"},
+ *     @OA\RequestBody(
+ *         required=true,
+ *         @OA\JsonContent(
+ *             @OA\Property(property="email", type="string", format="email", example="john@example.com")
+ *         )
+ *     ),
+ *     @OA\Response(
+ *         response=200,
+ *         description="Password reset link sent",
+ *         @OA\JsonContent(
+ *             @OA\Property(property="status", type="string"),
+ *             @OA\Property(property="message", type="string")
+ *         )
+ *     ),
+ *     @OA\Response(response=401, description="Validation error")
+ * )
+ */
 class UserController extends Controller
 {
     //
