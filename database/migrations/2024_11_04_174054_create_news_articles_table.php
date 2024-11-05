@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('news_articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('url')->unique();
+            $table->string('url',767)->unique();
             $table->string('source');
             $table->string('category');
             $table->string('author')->nullable();

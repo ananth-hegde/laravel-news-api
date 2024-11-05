@@ -9,7 +9,6 @@ use Validator;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
-use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
 {

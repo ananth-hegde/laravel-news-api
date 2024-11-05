@@ -28,7 +28,7 @@ class FetchNewsArticles extends Command
     ];
     private $guardianApiEnpoint = 'https://content.guardianapis.com/search';
 
-    private $newsApiToken = '04acd37a387f4e399bd5266397dafd19';
+    private $newsApiToken = '6851dff8dc814b4a9fa5f7f592604ecb';
     private $nyTimesApiToken = 'CaxFuyx4JptpBKR3SiyNdFQOp7vKGdn3';
 
     private $guardianApiToken = 'e03e3894-da1d-4ee8-9972-ea6ed2f46736';
