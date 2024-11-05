@@ -8,7 +8,7 @@ echo "Database is ready!"
 # Run database migrations
 php artisan migrate:fresh
 
-echo "Seeding the database..."
+echo "Seeding the database... Please wait, this may take some time"
 
 # Fetch news articles
 php artisan app:fetch-news-articles
