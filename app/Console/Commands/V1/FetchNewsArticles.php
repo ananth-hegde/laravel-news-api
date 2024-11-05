@@ -95,7 +95,7 @@ class FetchNewsArticles extends Command
             sleep(12); //sleep for 12 seconds to avoid rate limiting
         }
 
-        //Fetch news articles from Guardian
+        //Fetch news articles from The Guardian
         $guardianEndpoint = $this->guardianApiEnpoint . '?api-key=' . $this->guardianApiToken;
         $response = $client->request('GET', $guardianEndpoint);
         $newsArticles = json_decode($response->getBody(), true);
