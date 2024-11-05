@@ -4,6 +4,7 @@ use App\Http\Controllers\api\V1\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\V1\NewsArticleController;
+use App\Http\Controllers\api\V1\UserPreferenceController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -19,4 +20,7 @@ Route::group([
     'middleware' => ['auth:sanctum']
 ], function () {
     Route::apiResource('news-articles', NewsArticleController::class);
+    Route::get('/preferences', [UserPreferenceController::class, 'show']);
+    Route::put('/preferences', [UserPreferenceController::class, 'update']);
+    Route::get('/personalizedFeed', [UserPreferenceController::class, 'personalizedFeed']);
 });
