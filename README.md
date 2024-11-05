@@ -9,6 +9,7 @@ Follow these steps to set up and run the project locally.
 ### Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) (if not already installed)
+- [Composer](https://getcomposer.org/download/) (if not already installed)
 
 ### Installation
 
@@ -17,10 +18,13 @@ Follow these steps to set up and run the project locally.
    git clone https://github.com/ananth-hegde/laravel-news-api.git
    cd laravel-news-api
 ```
-2. **Install Docker Desktop:**
+2. **Install Docker Desktop and Composer:**
 
 If Docker Desktop is not already installed, download and install it from here.
 https://www.docker.com/products/docker-desktop
+
+If Composer is not already installed, download and install it from here
+https://getcomposer.org/download/
 
 3. **Install PHP dependencies:**
 ```sh
